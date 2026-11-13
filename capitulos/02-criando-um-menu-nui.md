@@ -97,7 +97,7 @@ const menu = document.getElementById('menu');
 
 // Função auxiliar para chamar o Lua
 function chamarLua(nome, dados = {}) {
-  return fetch(${'https://'}${GetParentResourceName()}/${nome}, {
+  return fetch(`https://${GetParentResourceName()}/${nome}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json; charset=UTF-8' },
     body: JSON.stringify(dados),
